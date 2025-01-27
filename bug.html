@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Incorrect attempt to access element before it is fully loaded.  This is an asynchronous operation.
+    const myDiv = document.getElementById('myDiv');
+    myDiv.style.display = 'none'; 
+  </script>
+</body>
+</html>
